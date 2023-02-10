@@ -25,7 +25,7 @@ namespace BenchmarkForQuickSort
 
         public Benchmark()
         {
-            arr = ArraysMethods.GenerateArray(_random, 100000);
+            arr = ArraysMethods.GenerateArray(_random, 10);
         }
 
 

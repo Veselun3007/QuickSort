@@ -23,8 +23,7 @@ namespace QuickSort.AlgorithmsQS
                 {
                     _numThreads++;
                 }
-                var _myThread = new Thread(() 
-                    => QuickSort(arr));
+                var _myThread = new Thread(() => QuickSort(arr));
                 _myThread.Start();
             }
             else
