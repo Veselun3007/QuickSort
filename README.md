@@ -50,5 +50,12 @@ QuickSortFolder
 
 The `Parallel.Invoke()` method enables parallel execution several subtasks. The `Parallel.Invoke` method takes an array of Action objects as a parameter, i.e we can pass to this method a set of methods that will be called when its implementation, and the number of methods may be different.
 
+![image](https://user-images.githubusercontent.com/70714177/218137680-78fc5497-103a-4b4c-9e8d-1a45cba00daa.png)
 
-The Task class is not normally used for similar tasks, so implementing the algorithm using it is simple an experiment conducted to demonstrate this possibility. Task class used for `I/O bound tasks`, in this case it is used for a `CPU bound` task, i.e. not as intended.
+**Working diagram of the Parallel.Invoke method**
+
+The Task class is not normally used for similar tasks, so implementing the algorithm using it is simple an experiment conducted to demonstrate this possibility. Task class used for `I/O bound` tasks, in this case it is used for a `CPU bound` task, i.e. not as intended.
+
+![image](https://user-images.githubusercontent.com/70714177/218137813-cee7c861-9257-49d9-a335-065ef0611ec3.png)
+
+**Working diagram of Task class**
