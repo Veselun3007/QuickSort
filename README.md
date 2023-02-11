@@ -47,21 +47,21 @@ QuickSortFolder
 
 The main functionality for using threads in the application is concentrated in the `System.Threading` namespace. It defines a class representing a separate thread - the `Thread` class. To parallelize the QuickSort algorithm, it is necessary to transfer subtasks to a separate thread.
 
-![image](https://user-images.githubusercontent.com/70714177/218170837-e695c547-a072-4ba8-855d-820a2db2f436.png)
+![image](https://user-images.githubusercontent.com/70714177/218247798-d24fd0a2-91bf-4d33-920a-eb97e6be0d39.png)
 
 **Image 1 - Flow graph of parallel QuickSort**
 --- ---
 
 The `Parallel.Invoke()` method enables parallel execution several subtasks. The `Parallel.Invoke` method takes an array of Action objects as a parameter, i.e we can pass to this method a set of methods that will be called when its implementation, and the number of methods may be different.
 
-![image](https://user-images.githubusercontent.com/70714177/218137680-78fc5497-103a-4b4c-9e8d-1a45cba00daa.png)
+![image](https://user-images.githubusercontent.com/70714177/218247520-5d4c14fe-35c7-4109-8006-5a104e6cf01a.png)
 
 **Image 2 - Working diagram of the Parallel.Invoke method**
 --- ---
 
 The Task class is not normally used for similar tasks, so implementing the algorithm using it is simple an experiment conducted to demonstrate this possibility. Task class used for `I/O bound` tasks, in this case it is used for a `CPU bound` task, i.e. not as intended.
 
-![image](https://user-images.githubusercontent.com/70714177/218137813-cee7c861-9257-49d9-a335-065ef0611ec3.png)
+![image](https://user-images.githubusercontent.com/70714177/218247567-806364ca-0fb9-4da4-9b58-d8f606c22849.png)
 
 **Image 3 - Working diagram of Task class**
 --- ---
