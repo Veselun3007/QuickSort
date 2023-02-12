@@ -1,7 +1,7 @@
 # QuickSort
 
 The project was developed as a course work. The task of the course work was to study the algorithm and study the possibility of its parallelization.
-You can learn more about the algorithm [here](https://en.wikipedia.org/wiki/Quicksort):
+You can learn more about the algorithm [here](https://en.wikipedia.org/wiki/Quicksort).
 
 ## Project structure
 ```bash
@@ -52,7 +52,7 @@ The main functionality for using threads in the application is concentrated in t
 **Image 1 - Flow graph of parallel QuickSort**
 --- ---
 
-The `Parallel.Invoke()` method enables parallel execution several subtasks. The `Parallel.Invoke` method takes an array of Action objects as a parameter, i.e we can pass to this method a set of methods that will be called when its implementation, and the number of methods may be different.
+The `Parallel.Invoke()` method enables parallel execution several subtasks. The `Parallel.Invoke` method takes an array of Action objects as a parameter, i.e we can pass to this method a set of methods that will be called when its instantiation, and the number of methods may be different.
 
 ![Working diagram of the Parallel.Invoke method](https://user-images.githubusercontent.com/70714177/218247520-5d4c14fe-35c7-4109-8006-5a104e6cf01a.png)
 
@@ -66,7 +66,7 @@ The Task class is not normally used for similar tasks, so implementing the algor
 **Image 3 - Working diagram of Task class**
 --- ---
 
-The `Benchmark.NET` library was used for testing. A benchmark is a simple test that provides a set of quantified results that can help you determine whether to update your code increased, decreased, or had no effect on performance. It is necessary to understand performance metrics of your application's methods to use them throughout the code optimization process. A reference test can have wide range or it may be a microtest that assesses small changes in source code.
+The `Benchmark.NET` library was used for testing. A benchmark is a simple test that provides a set of quantified results that can help you determine whether your code update increased, decreased, or had no effect on performance. It is necessary to understand performance metrics of your application's methods to use them throughout the code optimization process. A reference test can have wide range or it may be a microtest that assesses small changes in source code.
 
 **Test result for 100,000 items**
 
@@ -87,7 +87,7 @@ The `Benchmark.NET` library was used for testing. A benchmark is a simple test t
  - ``Allocated`` : Allocated memory per single operation (managed only, inclusive, 1KB = 1024B)
 
 >  #### Testing was carried out on a laptop with the following configurations:
->   - Intel Core i7-8550U CPU 1.80GHz (Kaby Lake R), 1 CPU, 8 logical and 4 physical cores;
+>   - Intel® Core™ i7-8550U;
 >   - 16 Gb RAM;
 >   - OS - Windows 11.
 --- ---
@@ -101,10 +101,10 @@ The `Benchmark.NET` library was used for testing. A benchmark is a simple test t
 
 ## Conclusions
 
-From the results of the study, I conclude that the performance of the QuickSort algorithm does not increase from parallelization Perhaps this is related to the recursive implementation of the data algorithm. In general, direct and parallel implementations of the algorithm are the same productive, but different initial data can be obtained the results. 
+From the results of the study, I conclude that the performance of the QuickSort algorithm does not increase from parallelization perhaps this is related to the recursive implementation of the data algorithm. In general, direct and parallel implementations of the algorithm are the same productive, but different data may lead to different results. 
 
 I also assume the following:
-- ``Task`` class is intended for ``I/O bound`` volume tasksusing it for this type of task is wrong and not profitable, but the possibility of its use is, and to do it very easy.
+- ``Task`` class is intended for ``I/O bound`` tasks, thus, it is not appropriate to use it in our context. But the possibility of its usage exists and it's easy to implement.
 - ``Parallel`` is a tool that allows you to easily parallelize code. Its use in such tasks is fully justified, and proper application can increase performance. Unfortunately in the course work, the method did not show itself in the best way.
 - ``Thread`` is designed for tasks of this kind. The main drawback is complexity of understanding for correct implementation.
 
